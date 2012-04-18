@@ -10,6 +10,9 @@ are normalized over the length of the longer string. A traditional Levenstein di
 This implementation attempts to give a more "classic" Levenstein distance by normalizing over the length of the target word, rather than
 the max length of the two words.  This means that, in the example above, the similarity score would be 0.8 for both "candid" and "candy."
 
+This improves spellchecking results in Lucene/Solr because it ensures that results are sorted according to their true edit distance.  Without it,
+"candid" would always be preferred to "candy" as a correction for "candi," even though they should be equally likely in terms of edit distance.
+
 
 Installation
 ----------
