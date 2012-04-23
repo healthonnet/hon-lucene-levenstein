@@ -25,6 +25,15 @@ mvn install
 
 Then copy the target/hon-lucene-levenstein-1.0.jar into your Solr war's lib directory.
 
+Then, for every spellchecker that you want to use this Levenstein distance for, add the following to the solrconfig.xml:
+
+```xml
+<lst name="spellchecker">
+   ...
+   <str name="distanceMeasure">org.healthonnet.spellcheck.levenstein.NormalizedLevensteinDistance</str>
+   ...
+</lst>
+
 Developer
 -----------
 
