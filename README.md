@@ -33,6 +33,7 @@ Then, for every spellchecker that you want to use this Levenstein distance for, 
    <str name="distanceMeasure">org.healthonnet.spellcheck.levenstein.NormalizedLevensteinDistance</str>
    ...
 </lst>
+```
 
 Developer
 -----------
